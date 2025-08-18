@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee List</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+
+        }
+        .EmployeeForm, .List {
+            width: 80%;
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="EmployeeForm">
+            <h1>Employees Entry</h1>
+            <form action="">
+                <div class="name">
+                    <label for="empName">Employee Name:</label><br>
+                    <input type="text" id="empName" value="" required>
+                </div>
+                <div class="age">
+                    <label for="empAge">Age:</label><br>
+                    <input type="text" id="empAge" value="">
+                </div>
+                <div class="position">
+                    <label for="empPosition"> Position:</label><br>
+                    <input type="text" id="empPosition" value="">
+                </div><br>
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </div>
+        <div class="List" id="EmployeeList">
+            <table border="1" width="100%">
+                <tr >
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Position</th>
+                </tr>
+                <tbody id="employeeTable"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

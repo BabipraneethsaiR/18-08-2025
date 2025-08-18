@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.model-sec{
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.margin{
+    margin: 20px;
+}
+.border{
+    background-color: brown;
+    padding: 10px;
+
+
+}
+.padding{
+    background-color: rgb(255, 252, 80);
+    padding: 30px;
+}
+.content{
+    background-color: rgb(119, 119, 174);
+    padding: 40px;
+    
+}
+.control{
+    background-color: rgb(236, 198, 255);
+    padding: 40px;
+    width: 80%;
+    margin-bottom: 40px;
+}
+label{
+    margin-right: 10px;
+}
+input[type="range"] {
+  accent-color: #483575; /* Modern browsers */
+}
+.range1{
+    margin-left: 10px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+}
+.range2{
+    margin-left: 1px;
+    margin-right: 5px;
+
+}
+.components{
+    padding: 20px;
+    background-color: rgb(233, 235, 200);
+    width: 80%;
+    margin-bottom: 50px;
+}
+.comp-head{
+    text-align: center;
+
+}
+.comp1{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.comp2{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.comp3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.comp4{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.comp-icon1{
+    border: 1px solid black;
+    border-style: dotted;
+    background-color: aliceblue;
+    padding: 6px;
+    padding-right: 15px;
+    margin-right: 10px;
+}
+.comp-icon2{
+
+    background-color:  brown;
+    padding: 6px;
+    padding-right: 15px;
+    margin-right: 10px;
+}
+.comp-icon3{
+
+    background-color:   rgb(255, 252, 80);
+    padding: 6px;
+    padding-right: 15px;
+    margin-right: 10px;
+}
+.comp-icon4{
+
+    background-color: rgb(119, 119, 174);
+    padding: 6px;
+    padding-right: 15px;
+    margin-right: 10px;
+}

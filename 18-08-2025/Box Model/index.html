@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CSS Box Model Demonstration</h1>
+        <div class="model-sec">
+            <div class="margin">
+                <div class="border">
+                    <div class="padding">
+                        <div class="content">
+                            <p style="color: rgb(252, 253, 255);">Content</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="control">
+            <form action="">
+                <label for="marginRange">Margin</label>
+                <input type="range" id="marginRange" min="0" max="10" value="50">
+                <span id="marginValue">50</span>px<br>
+                <label for="borderRange">Border</label>
+                <input type="range" id="borderRange" min="0" max="50" value="30">
+                <span id="borderValue">30</span>px<br>
+                <label for="paddingRange">Padding</label>
+                <input type="range" id="paddingRange" min="0" max="80" value="100">
+                <span id="paddingValue">40</span>px<br>
+            </form>
+
+        </div>
+        <div class="components">
+            <h1 class="comp-head">Box model components</h1>
+            <p class="comp1"><span class="comp-icon1"></span>Margin - Space outside the Border(Transparent)</p>
+            <p class="comp2"><span class="comp-icon2"></span>Border - Space between Margin & Padding</p>
+            <p class="comp3"><span class="comp-icon3"></span>Padding - Space between Border & Content</p>
+            <p class="comp4"><span class="comp-icon4"></span>Content - Actual Content </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
