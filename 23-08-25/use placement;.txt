@@ -1,0 +1,100 @@
+use placement;
+-- constraint based  columns
+create table user(
+user_id int not null,
+first_name varchar(60) not null,
+last_name varchar(60) not null,
+age int 
+);
+
+-- adding constraint 
+
+alter table user add unique(user_id);
+
+desc user;
+-- drop constraint 
+
+alter table user drop constraint user_id;
+
+insert into user(user_id , first_name,last_name,age) values (1,"Babi","R",19),(2,"Jashu","R",18);
+
+select * from user;
+
+
+alter table user drop column email;
+
+-- modifying column usig alter
+
+alter table user modify column email varchar(150) unique;
+
+-- table overview(schema)
+
+desc user;
+
+alter table user modify column last_name varchar(50) null;
+
+use placement;
+
+-- create table using primary key
+create table person(
+p_id int primary key,
+f_name varchar(60) not null,
+l_name varchar(60) not null,
+age int ,
+check(age>=18 and age<130)
+);
+
+-- droping primary key constraints
+
+alter table person drop primary key;
+
+-- check constraint
+
+desc person;
+
+-- adding multiple constraints 
+
+alter table person add (primary key(p_id) , unique(f_name));
+
+alter table person add check(age>=18 and age<=130);
+
+
+-- Foreign key Constraint 
+create database ecommerce;
+
+use ecommerce;
+
+-- category table (primary key) -> mapped to product table as foreign key
+
+create table category (
+c_id int primary key,
+c_name varchar(60) not null
+);
+
+-- foreign key 
+
+create table product (
+p_id int primary key,
+p_name varchar(60),
+c_id  int not null,
+foreign key (c_id) references category(c_id)
+);
+
+insert into category values (1,"clothing"),(2,"Footwear");
+
+select* from category;
+desc product;
+
+insert into product values(101,"Black Jeans",2),(102,"Sneakers",3);
+
+select * from product;
+
+delete from  category  where c_id=1;
+
+update category set c_id =3 where c_id=1;
+
+
+-- to update deletion operation in foreign key table we use ondelete cscade to update in primary key table 
+
+foreign key (c_id) references product(c_id) on delete cascade;
+
