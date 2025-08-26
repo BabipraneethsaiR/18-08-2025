@@ -1,4 +1,16 @@
 use placement;
+
+use placement;
+
+create table cseiot(
+name varchar(60),
+reg_no varchar(50),
+dep_name varchar(100),
+email_id varchar(60),
+phn_num varchar(10),
+country varchar(50)
+);
+
 select * from cseiot;
 
 -- update(set)
@@ -81,5 +93,6 @@ alter table  ece drop column country;
 -- truncate (used to delete total records in table and schema remains unchanged)
 
 truncate table ece;
+
 
 -- 
