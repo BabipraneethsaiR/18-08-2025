@@ -96,3 +96,47 @@ truncate table ece;
 
 
 -- 
+
+#transactions
+create database company_data;
+
+use company_data;
+-- create employees details
+create table department(
+dep_id int primary key,
+dep_name varchar(50)
+);
+
+create table employee (
+name varchar(50) not null,
+empl_id int primary key not null,
+age int,
+salary decimal(10,2) ,
+gender char,
+dep_id int,
+foreign key (dep_id)  references department(dep_id) 
+);
+
+insert into department values(1,"HR"),(2,"Developer"),(3,"Tester");
+insert into employee values ('Babi',1001,24,100000,"M",2),('Jashu',1002,34,200000,"M",1),('Guna',1003,45,400000,"F",3);
+
+start transaction;
+
+select * from department;
+select * from employee;
+
+savepoint s001;
+
+update employee set salary = 150000 where empl_id = 1001;
+
+rollback to savepoint s001;
+
+update employee set name ="Babipraneethsai" where empl_id = 1001;
+savepoint s003;
+
+rollback to savepoint s001;
+
+commmit;
+
+
+
