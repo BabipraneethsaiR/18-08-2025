@@ -65,7 +65,6 @@ update worker set first_name=ltrim(first_name);
 update worker set last_name=ltrim(LAST_NAME);
 
 update worker set 
-
 first_name = trim(first_name),
 last_name = trim(last_name),
 department = trim(department);
