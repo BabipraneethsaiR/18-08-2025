@@ -86,6 +86,40 @@ select count(*),joining_date from worker
 group by joining_date ;
 
 
+select first_name,department, salary+20000 from worker;
 
+
+# upper and Lower Case
+
+select upper(first_name) from worker;
+
+select lower(department) from worker;
+
+# Having 
+
+select sum(salary) as total_highest_sal,department from worker group by department 
+having total_highest_sal >1000000;
+
+#1. Find departments with average salary > 100000.
+select avg(salary) ,department from worker 
+group by department 
+having avg(salary) > 100000;
+
+#2. Find departments where max salary is exactly 500000.
+select max(salary),department from worker
+group by department
+having max(salary)=500000;
+
+#3. Find departments with more than 1 employee and salary > 100000.
+select count(department) ,department from worker 
+where salary >100000
+group by department 
+having count(department)>1;
+
+#4. Find departments with avg salary between 50000 and 200000.
+select avg(salary),department 
+from worker 
+group by department 
+having avg(salary) between 50000 and 200000;
 
 
