@@ -1,0 +1,25 @@
+package TheOver;
+
+public class OverLoad {
+	
+	public static void main(String[] args){
+		Calc o = new Calc();
+		int c = o.add(10,20);
+		int d = o.add(10, 20,30);
+		System.out.println("Sum: "+c);
+		System.out.println("Product: "+d);
+	}
+
+}
+
+class Calc{
+	int add(int a, int b){
+		return a + b;
+	}
+	
+	int add(int a, int b, int c){
+		return a*b*c;
+	}
+}
+
+//Method overloading is the process , where both the method have the same name , but can have different parameter

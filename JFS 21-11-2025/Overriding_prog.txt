@@ -1,0 +1,31 @@
+package nov21;
+
+class Animal{
+	void sound(){
+		System.out.println("Animal shouts");
+	}
+}
+
+class Dog extends Animal{
+	void sound(){
+	}
+}
+
+class Cat extends Animal{
+	void sound(){
+		System.out.println("Meowing");
+	}
+}
+public class TheOverRide {
+
+	public static void main(String[] args) {
+		Animal a = new Dog();
+		a.sound();
+		
+		Animal b = new Cat();
+		b.sound();
+		
+
+	}
+
+}
