@@ -1,0 +1,17 @@
+package nov19;
+
+public class BikesPro {
+	public static void main(String[] args){
+		
+	}
+
+}
+
+class Bikes{
+	void kawasaki(){
+		System.out.println("Kawasaki");
+		
+	}
+	
+	
+}
