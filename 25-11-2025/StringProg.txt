@@ -1,0 +1,54 @@
+package ExcHand;
+
+public class StringProg {
+	public static void main(String[] args){
+		String s1 ="Java";
+		char ch[]= {'b','a','b','i'};
+		String s2 = new String(ch);
+		System.out.println(s2);
+		System.out.println("Upper case:"+s1.toUpperCase());
+		System.out.println("LOwercase:"+s1.toLowerCase());
+		System.out.println("Removing White spaces:"+s1.trim());
+		System.out.println("StartsWith():"+s1.startsWith("J"));
+		System.out.println("endsWith():"+s1.endsWith("v"));
+		System.out.println("charAt(): "+s1.charAt(0));
+		System.out.println("length():"+s1.length());
+		
+		// intetrn 
+		String s3 = s1.intern();
+		System.out.println("Intern Method:"+s3); // it creates duplicate for the string
+		
+		// Valueof()
+		
+		String s4 = String.valueOf(s1); // it converts int to String 
+		System.out.println(s4+10);
+		
+		// replace  is used for word
+		
+		String s5 = "welcome Chennai";
+		System.out.println(s5.replace("Chennai", "Andhra"));
+		
+		// replaceAll is used for multiple characters
+		
+		System.out.println(s5.replaceAll("a", "A"));
+		
+		String s6 = s5.concat(s1);
+		System.out.println("concating Strings:"+s6);
+		
+		System.out.println("Checking String using equals():"+s5.equals(s1)); 
+		
+		
+		
+
+		
+
+		
+
+
+
+
+
+
+		
+	}
+}
