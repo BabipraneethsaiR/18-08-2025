@@ -1,0 +1,228 @@
+//String Buffer
+
+package nov27;
+
+public class StringBuff {
+	public static void main(String[] args){
+		StringBuffer s = new StringBuffer("Hello");
+		s.append(" chennai");
+		System.out.println(s);
+		s.replace(5, 15," Andhra");
+		System.out.println(s);
+		s.delete(5, 15);
+		System.out.println(s);
+		s.reverse();
+		System.out.println(s);
+		
+	}
+
+}
+
+
+
+
+Collection
+
+1) Array List 
+
+package nov27;
+
+import java.util.*;
+
+public class ArrayList123 {
+	public static void main(String[] args){
+		ArrayList<String> list = new ArrayList<String>(); // we cna also give different name for object
+		list.add("Babi");
+		list.add("Jashu");
+		list.add("Hari");
+		list.add("Sai");
+		list.add("Shru");
+		list.add("Murthy");
+		list.add("Manoj");
+		list.add("Karthik");
+		list.add("Bipin");
+		list.add("Hitheash");
+		list.add("Mouli");
+		System.out.println(list.get(4));
+		Iterator itr = list.iterator();
+		while(itr.hasNext()){
+			System.out.println("Array_Values: "+itr.next());
+		}
+	}
+
+}
+
+
+2) Linked LIst
+
+package nov27;
+
+import java.util.*;
+public class LinkedList123 {
+	public static void main(String[] args){
+		LinkedList<String> ll = new LinkedList<String>(); // we cna also give different name for object
+		ll.add("Babi");
+		ll.add("Jashu");
+		ll.add("Hari");
+		ll.add("Sai");
+		ll.add("Shru");
+		ll.add("Murthy");
+		ll.add("Manoj");
+		ll.add("Karthik");
+		ll.add("Bipin");
+		ll.add("Hitheash");
+		ll.add("Mouli");
+		System.out.println(ll.get(4));
+		Iterator<String> itr = ll.iterator();
+		while(itr.hasNext()){
+			System.out.println("LinkedList_value : "+itr.next());
+		}
+		
+		LinkedList<String> ll2 = new LinkedList<String>();
+		ll2.add("Hema");
+		ll2.add("Teja");
+		ll2.add("Deepu");
+		
+		System.out.println(ll2.getFirst());
+		ll2.addFirst("HemaSri");
+		System.out.println(ll2);
+		ll.addAll(ll2);
+		System.out.println(ll);
+		//Removing Linked list that has been added 
+		ll.removeAll(ll2);
+		ll.remove(4);
+		ll.clear();       // it deletes all values in array
+		System.out.println(ll);
+	}
+
+}
+
+
+3) All Map Types 
+
+
+package nov27;
+
+import java.util.*;
+
+public class MapProg {
+	public static void main(String[] args){
+		
+/*
+ * Map -- its based on key,value pair (k,v)
+ *
+1) HashMap 
+
+> Duplicates -- No
+> unique key but duplicates values
+
+
+ */
+		HashMap<Integer,String> Hm = new HashMap<Integer,String>();
+		Hm.put(101, "Babi");
+		Hm.put(102,"Hari");
+		Hm.put(103,"Jashu");
+		Hm.put(101,"babi");
+		Hm.put(106, "Dog");
+		Hm.put(107, "");
+		Hm.get(105);
+		Hm.remove(107);
+		System.out.println("HashMap: "+Hm);
+		
+/*
+ 2)LinkedHash- insertion Order
+ */
+		LinkedHashMap<Integer,String> LHm = new LinkedHashMap<Integer,String>();
+		LHm.put(101,"Babi");
+		LHm.put(102,"Hari");
+		LHm.put(103,"Jashu");
+		LHm.put(101,"babi");
+		LHm.put(106, "Dog");
+		LHm.put(107, "");
+		LHm.get(105);
+		LHm.remove(107);
+		System.out.println("LinkedHashMap: "+LHm);
+/*
+3) TreeMap -- sorting and it doesnt allow null vlaues 
+
+*/
+		TreeMap<Integer,String> Tm = new TreeMap<Integer,String>();
+		Tm.put(101, "Babi");
+		Tm.put(102,"Hari");
+		Tm.put(103,"Jashu");
+		Tm.put(101,"babi");
+		Tm.put(106, "Dog");
+		Tm.put(107, "");
+		Tm.get(105);
+		Tm.remove(107);
+		System.out.println("TreeMap: "+Tm);
+		
+		
+	}
+}
+
+4) All Set Program types 
+
+package nov27;
+
+import java.util.*;
+
+public class SetProg {
+	public static void main(String[] args){
+		
+/* 
+	  Sets -- is unique and doesnt accept duplicates
+----------------------------------------------
+1) Hash Set 
+
+insertion order -- it doesn't allow 
+duplicates -- it doesn't allow
+null -- accepts
+	  
+	  
+	 
+*/
+		HashSet<String> Hs = new HashSet<String>();
+		Hs.add("Babi");
+		Hs.add("hari");
+		Hs.add("JAsh");
+		Hs.add("hari");
+		Hs.add("");
+		
+		System.out.println("HashSet: "+Hs);
+		
+		System.out.println("--------------------------------------");
+		
+/* 
+ 2)LinkedHashSet -- same as hash set but it have insertion order 
+
+ */
+		LinkedHashSet<String> LHs = new LinkedHashSet<String>();
+		LHs.add("Babi");
+		LHs.add("hari");
+		LHs.add("JAsh");
+		LHs.add("hari");
+		LHs.add("");
+		
+		System.out.println("Linked_Hash _Set: "+LHs);
+		System.out.println("--------------------------------------");
+		
+/*
+ 3)TreeSet :
+ 
+ it has auto sorting to asc order so there is no insertion order
+ 
+ */
+		TreeSet<String> Ts = new TreeSet<String>();
+		Ts.add("Babi");
+		Ts.add("hari");
+		Ts.add("JAsh");
+		Ts.add("hari");
+		Ts.add("");
+		
+		System.out.println("Tree_Set: "+Ts );
+		
+	}
+}
+
+
