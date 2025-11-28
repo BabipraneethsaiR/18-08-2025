@@ -1,0 +1,17 @@
+body { 
+background-color: white; /* Light mode default */ 
+color: black; 
+transition: background-color 0.3s, color 0.3s; 
+}
+body.dark-theme { 
+background-color:  #282c34 ; 
+color: #f2f2f2; 
+} 
+body.dark-theme .container { 
+border: 2px solid d #5C6773; 
+} 
+.container { 
+max-width: 800px; 
+margin: 50px auto; 
+padding: 20px; 
+}
