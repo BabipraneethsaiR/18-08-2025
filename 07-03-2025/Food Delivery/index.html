@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+
+        <!-- Montserrat Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: "Montserrat";
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+        }
+        .nav-bar{
+            height: 50px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            border-bottom: 2px solid black;
+            background-color: rgba(67, 117, 160, 0.27);
+        }
+        .nav-brand{
+            height: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            padding: 0px 10px;
+        }
+        .nav-info{
+            height: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .nav-signup{
+            height: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .nav-info > a{
+            text-decoration: none;
+            margin: 3px;
+            padding: 5px 10px;
+            color: #121212;
+
+        }
+        .nav-signup > img, .nav-signup>button{
+            margin: 10px;
+         
+        }
+        .btn-signup{
+            background-color: #12121200;
+            padding: 5px 15px;
+            border: 1px solid #121212;
+            border-radius: 10px;
+
+        }
+        @media only screen and (max-width:600px){
+            .nav-info{
+                display: none;
+            }
+
+            .pstr-info>p{
+                display: none;
+            }
+
+            
+        }
+        .poster{
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+            width: 90%;
+            object-fit: cover;
+            margin: 50px 0%;
+            border-radius: 20px;
+
+        }
+        .pstr-info{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: -300px;
+            color: white;
+        
+            
+        }
+        .pstr-info > h3, .pstr-info > p {
+            width: 60%;
+    
+            margin: 2px;
+            padding: 10px;
+            text-align: center;
+        }
+        .menu{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            width: 90%;
+            margin: 20px;
+
+        }
+        .text{
+            display: flex;
+            flex-direction: column;
+            gap: 10%;
+            width: 100%;
+            align-items: start;
+            justify-content: space-around;
+
+        }
+        .menu-list{
+            width: 90%;   
+            height: 250px;    
+            display: flex; 
+            gap: 15%;
+            flex-direction: row;    
+            align-items: center;  
+            justify-content: space-around; 
+            overflow-y:hidden;          
+            padding: 10px 0;
+
+
+        }
+        .menu-items {
+            height: 100%;
+            width: 100%;
+            gap: 5%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content:center;
+        }
+        .dishes{
+            height: 1000px;
+            width: 90%;
+        }
+        .dish-container{
+            width: 100%;
+            padding: 10px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            flex-wrap: wrap;
+
+        }
+        .dish{
+            height: 350px;
+            width: 250px;
+            border: 1px solid black;
+            border-radius: 20px;
+            margin: 10px;
+        }
+        .dish-img{
+            height: 60%;
+            width: 100%;
+        }
+        .dish-info-cont{
+            height: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .dish-info{
+            width: 95%;
+            height: 40%;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <div class="nav-brand">
+            <p>Logo</p>
+        </div>
+        <div class="nav-info">
+            <a href="/">Home</a>
+            <a href="/">Menu</a>
+            <a href="/">Contact Us</a>
+        </div>
+        <div class="nav-signup">
+            <img src="./Assets/icons8-cart-30.png" alt="img">
+            <button class="btn-signup">Sign up</button>
+        </div>
+
+
+    </div>
+    <div class="poster">
+        <img src="./Assets/background.jpg" style="object-fit: cover; width: 100%; height: 100%; border-radius: 30px;"/>
+        <div class="pstr-info">
+            <h3>order your favourite food here</h3>
+            <p>Choose from a diverse menu featuring a delecatable array of crafted with the fine ingredients and culinary </p><br>
+        
+            <button class="btn-signup" style="background-color: aliceblue;">Explore</button>
+        </div>
+    </div>
+    <div class="menu">
+        <div class="text">
+            <h3>Explore Our Menu</h3><br>
+            <p>Choose from a diverse menu featuring a delecatable array of crafted with the fine ingredients and culinary </p>
+        </div>
+        <div class="menu-list"></div>
+    </div>
+        <div class="dishes">
+            <h2>Top Dishes near You</h2>
+            <div class="dish-container"></div>
+<script>
+    const imgsrc = ["./Assets/image7.jpeg","./Assets/image2.jpeg","./Assets/image3.jpeg","./Assets/image6.jpeg","./Assets/image5.jpeg","./Assets/food-image.png","./Assets/image8.jpeg"];
+    const name = ["Cake", "Soup", "Pizza", "Omlette", "Burger", "Butter Naan", "Pasta"];
+    let htmldata = "";
+
+    for (let i = 0; i < imgsrc.length; i++) {
+        htmldata += `
+        <div class="menu-items" id="menu-items-${i}" onclick="update(this)">
+            <img src="${imgsrc[i]}" alt="" style="border-radius: 50%; height: 100px; width: 100px;">
+            <p>${name[i]}</p>
+        </div>\n`;
+    }
+
+    document.getElementsByClassName("menu-list")[0].innerHTML = htmldata;
+
+    function updatesalad() {
+        const salad = [
+            { imgSrc: './Assets/image2.jpeg', name: 'Greek salad', desc: 'Food provides essential nutrients for overall health and well-being', price: 120, ratings: 4 },
+            { imgSrc: './Assets/image3.jpeg', name: 'Caesar salad', desc: 'A mix of fresh ingredients for a perfect meal.', price: 160, ratings: 4 },
+            { imgSrc: './Assets/image5.jpeg', name: 'Chicken salad', desc: 'A nutritious and tasty option.', price: 200, ratings: 4 },
+            { imgSrc: './Assets/image5.jpeg', name: 'Garden salad', desc: 'Fresh and healthy.', price: 180, ratings: 4 },
+            { imgSrc: './Assets/image6.jpeg', name: 'Fruit salad', desc: 'A mix of seasonal fruits.', price: 220, ratings: 4 },
+        ];
+
+        let dishesdata = "";
+        for (let i = 0; i < salad.length; i++) {
+            dishesdata += `
+            <div class="dish">
+                <img src="${salad[i].imgSrc}" class="dish-image" style="object-fit: cover; width: 100%; height: 60%; border-top-left-radius: 10px; border-top-right-radius: 10px;"/>
+                <div class="dish-info-cont">
+                    <div class="dish-info">
+                        <h4 class="dish-title">${salad[i].name}</h4>
+                        <p class="dish-desc">${salad[i].desc}</p>
+                        <p class="dish-price">₹${salad[i].price}</p>
+                    </div>
+                </div>
+            </div>\n`;
+        }
+        document.getElementsByClassName('dish-container')[0].innerHTML = dishesdata;
+    }
+
+    function update(obj) {
+        if (obj.id === 'menu-items-0') {
+            updatesalad();
+        }
+    }
+</script>
+
+
+
+
+
+    
+</body>
+</html>
