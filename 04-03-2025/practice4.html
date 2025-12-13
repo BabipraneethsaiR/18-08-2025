@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="www.google.in" method="post" novalidate> <!-- post is for security -->
+        <label for="name" >Name</label>
+        <input type="text"  id="name" pattern="A-Z & a-z"><br>
+        <br><label for="mail">Email</label> 
+        <input type="email" id="mail" placeholder="example@gmail.com"><br><br>
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob"><br><br>
+        <h2>Buttons</h2>
+        <label for="radio">Radio</label>
+        <input type="radio"><br>
+        <label for="checkbox">checkbox</label>
+        <input type="checkbox"><br><br>
+        <label for="submit"></label>
+        <input type="submit" onclick="alert('Succesfully submitted')"><br><br>
+        <label for="quantity">quantity</label>
+        <input type="" min="0" max="100" step="2"><br><br>
+        <label for="cars">Choose a car:</label>
+        <select id="cars" name="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="fiat">Fiat</option>
+            <option value="audi">Audi</option>
+        </select>
+
+    
+      </form>
+</body>
+</html>

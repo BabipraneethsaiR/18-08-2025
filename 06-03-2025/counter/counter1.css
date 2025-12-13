@@ -1,0 +1,57 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    background-color: cadetblue;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.display{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+}
+.but{
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+
+}
+#result{
+    background-color: crimson;
+    height: 150px;
+    width: 150px;
+    border-radius: 200%;
+    
+}
+#button{
+    background-color: darkgoldenrod;
+    height: 50px;
+    width: 50px;
+    margin-top: -40%;
+    border-radius: 200%;
+
+}
+#res{
+    margin-top: 5%;
+    height: 50px;
+    width: 50px;
+    background-color: rgb(182, 174, 239);
+    border-radius: 200%;
+    font-weight: bold;
+
+
+}

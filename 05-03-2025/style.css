@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    gap: 10%;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #c37575;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 5px;
+}
+
+/* Columns */
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Column width settings */
+.column-1 {
+    width: 20%; /* 1st column (2 images stacked in first row, 1 image in second row) */
+}
+
+.column-2 {
+    width: 20%; /* 2nd column (1 image per row) */
+}
+
+.column-3 {
+    width: 20%; /* 3rd column (2 images stacked in first row, 1 image in second row) */
+}
+
+.column-4 {
+    width: 20%; /* 4th column (1 common image spanning both rows) */
+    display: flex;
+    align-items: center;
+}
+
+/* Image Styling */
+img{
+    height: 200px;
+    width: 200px;
+
+}

@@ -1,0 +1,39 @@
+#head{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: brown;
+}
+.main{
+    background-color: aqua;
+    height: 200px;
+    width: 700px;
+}
+.button{
+    display: flex;
+}
+.button1{
+    margin-left: 17%;
+    height: 50px;
+    width: 50px;
+    border: 2px solid black;
+    border-top-right-radius: 50px;
+}
+.button2{
+    margin-left: 17%;
+    height: 50px;
+    width: 50px;
+    border: 2px solid black;
+    border-top-right-radius: 50px;
+}
+#res{
+    margin-left: 40%;
+    margin-top: 20%;
+    border: 2px solid black;
+    height: 50px;
+    width: 50px;
+    border-radius: 200%;
+}
+#result{
+    padding: 10px;
+    text-align: center;
+}

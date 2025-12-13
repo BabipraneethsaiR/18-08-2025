@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin-top: 0%;
+            
+        }
+        #header{
+           
+            text-align: center;
+            font-family: cursive;
+            font-size: 30px;
+            background-color: chocolate;
+            height: 50px;
+            margin: 0;
+            font-weight: bold;            
+
+        }
+        h3{
+            text-align: center;
+        }
+        .register{
+            text-align: center;
+            margin: auto;
+            background-color: rgb(98, 176, 231);
+            padding: 20px;
+            width: 50%;
+        }
+        .social-media{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+     
+        }
+        footer{
+            text-align: center;
+            padding: 20px;
+        }
+        .footer{
+            background-color: beige;
+            padding: 10px;
+            margin-top: 4%;
+        }
+
+    </style>
+    <h2 id="header" style="color: rgb(208, 230, 250);">Student Connect</h2><br>
+    <h3>Regiter Page</h3>
+    <div class="register">
+        <form action="/action_page.php">
+            <label for="fname">First name:</label><br>
+            <input type="text" id="fname" name="fname" value="John"><br><br>
+            <label for="lname">Last name:</label><br>
+            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+            <label for="email">email</label><br>
+            <input type="email" name="mail" id="email"><br><br>
+            <label for="usename">
+                username
+            </label><br>
+            <input type="text" name="user" id="username"><br><br>
+            <label for="password">password</label><br>
+            <input type="password"><br><br>
+            <div>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+          </form><br><br>
+          <a href="home.html">home</a>
+    </div>
+    <div class="footer">
+        <div class="social-media">
+            <a href="www.instagram.in"><img src="Instagram_icon.png" alt="Instagram" width="20px"></a>
+            <a href="www.instagram.in"><img src="twitter.png" alt="Instagram" width="20px"></a>
+            <a href="www.instagram.in"><img src="linkedin.png" alt="Instagram" width="20px"></a>
+            
+        </div>
+        <footer>
+            <p>&copy; 2025 you reserved all the rights</p>
+        </footer>
+
+    </div>
+
+        
+</body>
+</html>
