@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .list-container{
+            background-color: darkolivegreen;
+            min-height: 400px;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        .list-input{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .list-items{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: -200px;
+            gap: 10%;
+
+        }
+        .list-footer{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div class="list-container">
+        <div class="list-header">
+            <input type="text" id="list-input">
+            <button id="Addtask" onclick="Addnewtask()">Add Task</button>
+        </div>
+        <div class="list-body">
+        </div>
+        <div class="list-footer">
+            <p>pendings</p>
+            <button>Clear All</button>
+        </div>
+    </div>
+    <script>
+        const data=[]
+        const input_data = document.getElementById('list-input')
+        const list_items = document.getElementsByClassName('list-body')[0]
+        function Addnewtask() {
+            let data_values = input_data.value
+            const task = {
+                status: false,
+                message: data_values
+            }
+            data.push(task)
+            console.log(data)
+        }
+        
+    </script>
+</body>
+</html>
