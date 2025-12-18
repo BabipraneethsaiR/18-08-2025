@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Payment</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h2>Payment</h2>
+
+        <p>
+            <strong>Amount to Pay:</strong>
+            ₹<span th:text="${amount}"></span>
+        </p>
+
+        <button id="rzp-button" class="btn btn-primary">
+            Pay with Razorpay (Test Mode)
+        </button>
+
+        <p style="margin-top:15px; color:#555;">
+            * Razorpay Test Mode – No real money deducted
+        </p>
+    </div>
+</div>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script th:inline="javascript">
+    /*<![CDATA[*/
+
+    const options = {
+        key: /*[[${key}]]*/,
+        amount: /*[[${amount}]]*/ * 100,
+        currency: "INR",
+        name: "Movie Ticket Booking",
+        description: "Ticket Payment",
+        order_id: /*[[${orderId}]]*/,
+        handler: function (response) {
+            alert("Payment Successful");
+            window.location.href = "/user/dashboard";
+        }
+    };
+
+    const rzp = new Razorpay(options);
+
+    document.getElementById("rzp-button").onclick = function () {
+        rzp.open();
+    };
+
+    /*]]>*/
+</script>
+
+
+</body>
+</html>

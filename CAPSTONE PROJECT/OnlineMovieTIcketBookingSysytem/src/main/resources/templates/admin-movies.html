@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Manage Movies</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"></div>
+
+<div class="container">
+    <div class="card">
+        <h2>Movies</h2>
+
+        <a href="/admin/movies/add" class="btn btn-primary">Add Movie</a>
+
+        <table style="margin-top:20px;">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Genre</th>
+                    <th>Duration</th>
+                    <th>Language</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="movie : ${movies}">
+                    <td th:text="${movie.title}"></td>
+                    <td th:text="${movie.genre}"></td>
+                    <td th:text="${movie.duration} + ' mins'"></td>
+                    <td th:text="${movie.language}"></td>
+                    <td>—</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+</html>

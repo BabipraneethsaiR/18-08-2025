@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"></div>
+
+<div class="container">
+    <div class="card admin_card">
+        <h2>Admin Dashboard</h2>
+        <p>Manage Movies and Theatres</p>
+
+        <div style="margin-top:20px;">
+            <a href="/admin/movies" class="btn btn-primary">Manage Movies</a>
+            <a href="/admin/theatres" class="btn btn-primary" style="margin-left:10px;">Manage Theatres</a>
+        </div>
+    </div>
+</div>
+
+<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+</html>

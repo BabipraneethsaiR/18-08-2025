@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+
+        <!-- TITLE -->
+        <h2 th:text="${isAdminLogin} ? 'Admin Login' : 'User Login'"></h2>
+
+        <!-- FORM -->
+        <form th:action="${isAdminLogin} ? @{/admin/login} : @{/login}" method="post">
+
+            <label>Email</label>
+            <input type="email" name="email" required>
+
+            <label>Password</label>
+            <input type="password" name="password" required>
+
+            <button class="btn btn-primary">Login</button>
+        </form>
+
+        <!-- USER REGISTER LINK -->
+        <p th:if="${!isAdminLogin}">
+            New user? <a href="/register">Register here</a>
+        </p>
+
+        <!-- ERROR -->
+        <p th:if="${error}" style="color:red;">
+            Invalid email or password
+        </p>
+
+    </div>
+</div>
+
+</body>
+</html>

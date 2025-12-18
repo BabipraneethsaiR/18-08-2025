@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Book Ticket</title>
+    <link rel="stylesheet" href="/css/style.css">
+	<style>
+		.seat-container {
+		    display: grid;
+		    grid-template-columns: repeat(4, 50px);
+		    gap: 10px;
+		    margin-top: 10px;
+		}
+
+		.seat {
+		    padding: 10px;
+		    background-color: #e0e0e0;
+		    text-align: center;
+		    cursor: pointer;
+		    border-radius: 5px;
+		    user-select: none;
+		}
+
+		.seat.selected {
+		    background-color: #004aad;
+		    color: white;
+		}
+
+		.seat.booked {
+		    background-color: #999;
+		    cursor: not-allowed;
+		}
+
+	</style>
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"></div>
+
+<div class="container">
+    <div class="card">
+        <h2>Book Your Ticket</h2>
+
+        <form action="/user/book" method="post" th:object="${booking}">
+
+            <label>Select Movie</label>
+            <select name="movieId" required>
+                <option value="">-- Select Movie --</option>
+                <option th:each="movie : ${movies}"
+                        th:value="${movie.id}"
+                        th:text="${movie.title}">
+                </option>
+            </select>
+
+            <label>Select Theatre</label>
+            <select name="theatreId" required>
+                <option value="">-- Select Theatre --</option>
+                <option th:each="theatre : ${theatres}"
+                        th:value="${theatre.id}"
+                        th:text="${theatre.name + ' - ' + theatre.location}">
+                </option>
+            </select>
+
+            <label>Number of Tickets</label>
+            <input type="number" min="1" th:field="*{numberOfTickets}" required>
+			<label>Select Seats</label>
+
+			<div class="seat-container" id="seatContainer">
+			    <div class="seat">A1</div>
+			    <div class="seat">A2</div>
+			    <div class="seat">A3</div>
+			    <div class="seat">A4</div>
+
+			    <div class="seat">B1</div>
+			    <div class="seat">B2</div>
+			    <div class="seat">B3</div>
+			    <div class="seat">B4</div>
+			</div>
+
+			<p id="seatInfo" style="margin-top:10px;color:#555;"></p>
+
+  
+            <button class="btn btn-primary">Proceed to Payment</button>
+        </form>
+    </div>
+</div>
+
+<div th:replace="fragments/footer :: footer"></div>
+<script>
+    const seats = document.querySelectorAll('.seat');
+    const ticketInput = document.querySelector('input[name="numberOfTickets"]');
+    const seatInfo = document.getElementById('seatInfo');
+
+    let selectedSeats = [];
+
+    seats.forEach(seat => {
+        seat.addEventListener('click', () => {
+
+            const maxSeats = parseInt(ticketInput.value || 0);
+
+            if (!seat.classList.contains('selected')) {
+                if (selectedSeats.length >= maxSeats) {
+                    alert("You can select only " + maxSeats + " seats");
+                    return;
+                }
+                seat.classList.add('selected');
+                selectedSeats.push(seat.innerText);
+            } else {
+                seat.classList.remove('selected');
+                selectedSeats = selectedSeats.filter(s => s !== seat.innerText);
+            }
+
+            seatInfo.innerText = "Selected Seats: " + selectedSeats.join(", ");
+        });
+    });
+</script>
+
+</body>
+
+</html>

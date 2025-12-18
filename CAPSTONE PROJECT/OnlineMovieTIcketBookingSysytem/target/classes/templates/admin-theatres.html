@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Manage Theatres</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div th:replace="fragments/header :: header"></div>
+
+<div class="container">
+    <div class="card">
+        <h2>Theatres</h2>
+
+        <a href="/admin/theatres/add" class="btn btn-primary">Add Theatre</a>
+
+        <table style="margin-top:20px;">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Location</th>
+                    <th>Seats</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="theatre : ${theatres}">
+                    <td th:text="${theatre.name}"></td>
+                    <td th:text="${theatre.location}"></td>
+                    <td th:text="${theatre.totalSeats}"></td>
+                    <td th:text="${theatre.ticketPrice}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div th:replace="fragments/footer :: footer"></div>
+
+</body>
+</html>
